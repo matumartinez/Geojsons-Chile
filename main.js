@@ -103,6 +103,13 @@ const regions = [...new Set(DISTRICTS.map(d => d.region))];
 const districtColor = d3.scaleOrdinal().domain(regions).range(REGION_COLORS);
 
 const PROVINCE_COLOR = '#5aaa8c';
+const REGION_COLOR   = '#e07b54';
+
+const REGIONS = [
+  'Arica y Parinacota', 'Tarapacá', 'Antofagasta', 'Atacama',
+  'Coquimbo', 'Valparaíso', 'RM', "O'Higgins", 'Maule', 'Ñuble',
+  'Bío-Bío', 'La Araucanía', 'Los Ríos', 'Los Lagos', 'Aysén', 'Magallanes',
+];
 
 // ── SVG & zoom ────────────────────────────────────────────────────────────────
 
@@ -179,10 +186,28 @@ PROVINCES.forEach((p, i) => {
 });
 select.appendChild(grpP);
 
+const grpR = document.createElement('optgroup');
+grpR.label = 'Regiones';
+REGIONS.forEach((name, i) => {
+  const opt = document.createElement('option');
+  opt.value = `r:${i}`;
+  opt.textContent = name;
+  grpR.appendChild(opt);
+});
+select.appendChild(grpR);
+
 function renderSelected() {
   const [type, idx] = select.value.split(':');
 
-  if (type === 'd') {
+  if (type === 'r') {
+    const name = REGIONS[+idx];
+    render(
+      `regiones/${name}.json`,
+      REGION_COLOR,
+      feat => `<strong>${feat.properties.name}</strong>
+               <span class="region-name">${name}</span>`
+    );
+  } else if (type === 'd') {
     const d = DISTRICTS[+idx];
     render(
       d.file,
