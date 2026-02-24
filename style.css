@@ -8,35 +8,39 @@ body {
   background: #0f1117;
   color: #e0e0e0;
   font-family: 'Segoe UI', system-ui, sans-serif;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-  padding: 24px 16px;
-  gap: 20px;
+  justify-content: center;
+  padding: 20px;
 }
 
-header {
-  text-align: center;
+#layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+#sidebar {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 12px;
+  gap: 16px;
+  width: 240px;
+  flex-shrink: 0;
+  padding-top: 8px;
 }
 
 h1 {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   color: #c9d8f0;
-}
-
-#controls {
-  display: flex;
-  align-items: center;
+  line-height: 1.4;
 }
 
 #district-select {
+  width: 100%;
   background: #1e2435;
   color: #c9d8f0;
   border: 1px solid #2a3a5c;
@@ -48,7 +52,8 @@ h1 {
   background-repeat: no-repeat;
   background-position: right 10px center;
   cursor: pointer;
-  min-width: 260px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 #district-select:focus {

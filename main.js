@@ -1,5 +1,5 @@
-const W = 520;
-const H = 820;
+const W = 400;
+const H = 660;
 
 // ── Data ──────────────────────────────────────────────────────────────────────
 
@@ -104,6 +104,7 @@ const districtColor = d3.scaleOrdinal().domain(regions).range(REGION_COLORS);
 
 const PROVINCE_COLOR = '#5aaa8c';
 const REGION_COLOR   = '#e07b54';
+const COMUNA_COLOR   = '#7b9fd4';
 
 const REGIONS = [
   'Arica y Parinacota', 'Tarapacá', 'Antofagasta', 'Atacama',
@@ -196,10 +197,35 @@ REGIONS.forEach((name, i) => {
 });
 select.appendChild(grpR);
 
+const grpC = document.createElement('optgroup');
+grpC.label = 'País Completo';
+const optChile = document.createElement('option');
+optChile.value = 'c:0';
+optChile.textContent = 'Chile (por regiones)';
+grpC.appendChild(optChile);
+const optComunas = document.createElement('option');
+optComunas.value = 'c:1';
+optComunas.textContent = 'Chile (por comunas)';
+grpC.appendChild(optComunas);
+select.appendChild(grpC);
+
 function renderSelected() {
   const [type, idx] = select.value.split(':');
 
-  if (type === 'r') {
+  if (type === 'c' && idx === '1') {
+    render(
+      'país/chile (por comunas).json',
+      COMUNA_COLOR,
+      feat => `<strong>${feat.properties.name}</strong>
+               <span class="region-name">Provincia de ${feat.properties.province}</span>`
+    );
+  } else if (type === 'c') {
+    render(
+      'país/chile (por regiones).json',
+      REGION_COLOR,
+      feat => `<strong>${feat.properties.name}</strong>`
+    );
+  } else if (type === 'r') {
     const name = REGIONS[+idx];
     render(
       `regiones/${name}.json`,

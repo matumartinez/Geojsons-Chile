@@ -7,16 +7,16 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Distritos y Provincias de Chile</h1>
-    <div id="controls">
+  <div id="layout">
+    <aside id="sidebar">
+      <h1>Distritos y Provincias de Chile</h1>
       <select id="district-select"></select>
-    </div>
-    <p class="hint">Scroll para hacer zoom · Arrastra para mover</p>
-  </header>
+      <p class="hint">Scroll para hacer zoom · Arrastra para mover</p>
+    </aside>
 
-  <div id="map-container">
-    <svg id="map"></svg>
+    <div id="map-container">
+      <svg id="map"></svg>
+    </div>
   </div>
 
   <div id="tooltip"></div>
