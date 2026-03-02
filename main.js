@@ -90,6 +90,74 @@ const PROVINCES = [
   { name: 'Última Esperanza',         region: 'Magallanes'         },
 ];
 
+const CONSEJOS_REGIONALES = [
+  { name: 'Arica',               region: 'Arica y Parinacota' },
+  { name: 'Parinacota',          region: 'Arica y Parinacota' },
+  { name: 'Iquique',             region: 'Tarapacá'           },
+  { name: 'Tamarugal',           region: 'Tarapacá'           },
+  { name: 'Tocopilla',           region: 'Antofagasta'        },
+  { name: 'Antofagasta',         region: 'Antofagasta'        },
+  { name: 'El Loa',              region: 'Antofagasta'        },
+  { name: 'Chañaral',            region: 'Atacama'            },
+  { name: 'Copiapó',             region: 'Atacama'            },
+  { name: 'Huasco',              region: 'Atacama'            },
+  { name: 'Elqui',               region: 'Coquimbo'           },
+  { name: 'Limarí',              region: 'Coquimbo'           },
+  { name: 'Choapa',              region: 'Coquimbo'           },
+  { name: 'Petorca',             region: 'Valparaíso'         },
+  { name: 'Los Andes',           region: 'Valparaíso'         },
+  { name: 'San Felipe',          region: 'Valparaíso'         },
+  { name: 'Quillota',            region: 'Valparaíso'         },
+  { name: 'Marga Marga',         region: 'Valparaíso'         },
+  { name: 'Valparaíso I',        region: 'Valparaíso'         },
+  { name: 'Valparaíso II',       region: 'Valparaíso'         },
+  { name: 'San Antonio',         region: 'Valparaíso'         },
+  { name: 'Isla de Pascua',      region: 'Valparaíso'         },
+  { name: 'Chacabuco',           region: 'RM'                 },
+  { name: 'Santiago I',          region: 'RM'                 },
+  { name: 'Santiago II',         region: 'RM'                 },
+  { name: 'Santiago III',        region: 'RM'                 },
+  { name: 'Santiago IV',         region: 'RM'                 },
+  { name: 'Santiago V',          region: 'RM'                 },
+  { name: 'Santiago VI',         region: 'RM'                 },
+  { name: 'Cordillera',          region: 'RM'                 },
+  { name: 'Maipo',               region: 'RM'                 },
+  { name: 'Talagante',           region: 'RM'                 },
+  { name: 'Cachapoal I',         region: "O'Higgins"          },
+  { name: 'Cachapoal II',        region: "O'Higgins"          },
+  { name: 'Colchagua',           region: "O'Higgins"          },
+  { name: 'Cardenal Caro',       region: "O'Higgins"          },
+  { name: 'Curicó',              region: 'Maule'              },
+  { name: 'Talca',               region: 'Maule'              },
+  { name: 'Linares',             region: 'Maule'              },
+  { name: 'Cauquenes',           region: 'Maule'              },
+  { name: 'Diguillín',           region: 'Ñuble'              },
+  { name: 'Punilla',             region: 'Ñuble'              },
+  { name: 'Itata',               region: 'Ñuble'              },
+  { name: 'Concepción I',        region: 'Bío-Bío'            },
+  { name: 'Concepción II',       region: 'Bío-Bío'            },
+  { name: 'Concepción III',      region: 'Bío-Bío'            },
+  { name: 'Arauco',              region: 'Bío-Bío'            },
+  { name: 'Biobío',              region: 'Bío-Bío'            },
+  { name: 'Malleco',             region: 'La Araucanía'       },
+  { name: 'Cautín I',            region: 'La Araucanía'       },
+  { name: 'Cautín II',           region: 'La Araucanía'       },
+  { name: 'Valdivia',            region: 'Los Ríos'           },
+  { name: 'Ranco',               region: 'Los Ríos'           },
+  { name: 'Osorno',              region: 'Los Lagos'          },
+  { name: 'Llanquihue',          region: 'Los Lagos'          },
+  { name: 'Chiloé',              region: 'Los Lagos'          },
+  { name: 'Palena',              region: 'Los Lagos'          },
+  { name: 'Aysén',               region: 'Aysén'              },
+  { name: 'Coyhaique',           region: 'Aysén'              },
+  { name: 'General Carrera',     region: 'Aysén'              },
+  { name: 'Capitán Prat',        region: 'Aysén'              },
+  { name: 'Última Esperanza',    region: 'Magallanes'         },
+  { name: 'Magallanes',          region: 'Magallanes'         },
+  { name: 'Tierra del Fuego',    region: 'Magallanes'         },
+  { name: 'Antártica Chilena',   region: 'Magallanes'         },
+];
+
 // ── Colors ────────────────────────────────────────────────────────────────────
 
 const REGION_COLORS = [
@@ -105,6 +173,7 @@ const districtColor = d3.scaleOrdinal().domain(regions).range(REGION_COLORS);
 const PROVINCE_COLOR = '#5aaa8c';
 const REGION_COLOR   = '#e07b54';
 const COMUNA_COLOR   = '#7b9fd4';
+const CR_COLOR       = '#a67cc0';
 
 const REGIONS = [
   'Arica y Parinacota', 'Tarapacá', 'Antofagasta', 'Atacama',
@@ -187,6 +256,16 @@ PROVINCES.forEach((p, i) => {
 });
 select.appendChild(grpP);
 
+const grpCR = document.createElement('optgroup');
+grpCR.label = 'Consejos Regionales';
+CONSEJOS_REGIONALES.forEach((cr, i) => {
+  const opt = document.createElement('option');
+  opt.value = `cr:${i}`;
+  opt.textContent = `${cr.name} — ${cr.region}`;
+  grpCR.appendChild(opt);
+});
+select.appendChild(grpCR);
+
 const grpR = document.createElement('optgroup');
 grpR.label = 'Regiones';
 REGIONS.forEach((name, i) => {
@@ -241,13 +320,21 @@ function renderSelected() {
       feat => `<strong>Distrito ${d.num} &mdash; ${feat.properties.name}</strong>
                <span class="region-name">${d.region}</span>`
     );
-  } else {
+  } else if (type === 'p') {
     const p = PROVINCES[+idx];
     render(
       `provincias/${p.name} (${p.region}).json`,
       PROVINCE_COLOR,
       feat => `<strong>${feat.properties.name}</strong>
                <span class="region-name">Provincia de ${p.name}</span>`
+    );
+  } else {
+    const cr = CONSEJOS_REGIONALES[+idx];
+    render(
+      `consejos regionales/${cr.name} (${cr.region}).json`,
+      CR_COLOR,
+      feat => `<strong>${feat.properties.name}</strong>
+               <span class="region-name">C.R. de ${cr.name}</span>`
     );
   }
 }
