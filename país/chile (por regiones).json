@@ -12992,11 +12992,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "diego"
+        "name": "Magallanes y Antártica Chilena"
       },
       "geometry": {
-        "type": "Polygon",
+        "type": "MultiPolygon",
         "coordinates": [
+[
           [
             [
               -68.75408928841354,
@@ -13025,19 +13026,9 @@
             [
               -68.75408928841354,
               -56.53725140816483
+              ]
             ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Magallanes y Antártica Chilena"
-      },
-      "geometry": {
-        "type": "MultiPolygon",
-        "coordinates": [
+          ],
           [
             [
               [
