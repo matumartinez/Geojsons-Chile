@@ -23,15 +23,15 @@ const DISTRICTS = [
   { num: 17, region: 'Maule',               file: 'distritos electorales/distrito 17 (Maule).json' },
   { num: 18, region: 'Maule',               file: 'distritos electorales/distrito 18 (Maule).json' },
   { num: 19, region: 'Ñuble',               file: 'distritos electorales/distrito 19 (Ñuble).json' },
-  { num: 20, region: 'Bío-Bío',             file: 'distritos electorales/distrito 20 (Bío-Bío).json' },
-  { num: 21, region: 'Bío-Bío',             file: 'distritos electorales/distrito 21 (Bío-Bío).json' },
+  { num: 20, region: 'Biobío',              file: 'distritos electorales/distrito 20 (Biobío).json' },
+  { num: 21, region: 'Biobío',              file: 'distritos electorales/distrito 21 (Biobío).json' },
   { num: 22, region: 'La Araucanía',        file: 'distritos electorales/distrito 22 (La Araucanía).json' },
   { num: 23, region: 'La Araucanía',        file: 'distritos electorales/distrito 23 (La Araucanía).json' },
   { num: 24, region: 'Los Ríos',            file: 'distritos electorales/distrito 24 (Los Ríos).json' },
   { num: 25, region: 'Los Lagos',           file: 'distritos electorales/distrito 25 (Los Lagos).json' },
   { num: 26, region: 'Los Lagos',           file: 'distritos electorales/distrito 26 (Los Lagos).json' },
   { num: 27, region: 'Aysén',               file: 'distritos electorales/distrito 27 (Aysén).json' },
-  { num: 28, region: 'Magallanes',          file: 'distritos electorales/distrito 28 (Magallanes).json' },
+  { num: 28, region: 'Magallanes y Antártica Chilena',          file: 'distritos electorales/distrito 28 (Magallanes y Antártica Chilena).json' },
 ];
 
 const PROVINCES = [
@@ -68,10 +68,12 @@ const PROVINCES = [
   { name: 'Curicó',                   region: 'Maule'              },
   { name: 'Linares',                  region: 'Maule'              },
   { name: 'Talca',                    region: 'Maule'              },
-  { name: 'Ñuble',                    region: 'Ñuble'              },
-  { name: 'Arauco',                   region: 'Bío-Bío'            },
-  { name: 'Bio Bío',                  region: 'Bío-Bío'            },
-  { name: 'Concepción',               region: 'Bío-Bío'            },
+  { name: 'Diguillín',                region: 'Ñuble'              },
+  { name: 'Punilla',                  region: 'Ñuble'              },
+  { name: 'Itata',                    region: 'Ñuble'              },
+  { name: 'Arauco',                   region: 'Biobío'            },
+  { name: 'Biobío',                   region: 'Biobío'            },
+  { name: 'Concepción',               region: 'Biobío'            },
   { name: 'Cautín',                   region: 'La Araucanía'       },
   { name: 'Malleco',                  region: 'La Araucanía'       },
   { name: 'Ranco',                    region: 'Los Ríos'           },
@@ -84,10 +86,10 @@ const PROVINCES = [
   { name: 'Capitán Prat',             region: 'Aysén'              },
   { name: 'Coihaique',                region: 'Aysén'              },
   { name: 'General Carrera',          region: 'Aysén'              },
-  { name: 'Antártica Chilena',        region: 'Magallanes'         },
-  { name: 'Magallanes',               region: 'Magallanes'         },
-  { name: 'Tierra del Fuego',         region: 'Magallanes'         },
-  { name: 'Última Esperanza',         region: 'Magallanes'         },
+  { name: 'Antártica Chilena',        region: 'Magallanes y Antártica Chilena'         },
+  { name: 'Magallanes',               region: 'Magallanes y Antártica Chilena'         },
+  { name: 'Tierra del Fuego',         region: 'Magallanes y Antártica Chilena'         },
+  { name: 'Última Esperanza',         region: 'Magallanes y Antártica Chilena'         },
 ];
 
 const CONSEJOS_REGIONALES = [
@@ -134,11 +136,11 @@ const CONSEJOS_REGIONALES = [
   { name: 'Diguillín',           region: 'Ñuble'              },
   { name: 'Punilla',             region: 'Ñuble'              },
   { name: 'Itata',               region: 'Ñuble'              },
-  { name: 'Concepción I',        region: 'Bío-Bío'            },
-  { name: 'Concepción II',       region: 'Bío-Bío'            },
-  { name: 'Concepción III',      region: 'Bío-Bío'            },
-  { name: 'Arauco',              region: 'Bío-Bío'            },
-  { name: 'Biobío',              region: 'Bío-Bío'            },
+  { name: 'Concepción I',        region: 'Biobío'            },
+  { name: 'Concepción II',       region: 'Biobío'            },
+  { name: 'Concepción III',      region: 'Biobío'            },
+  { name: 'Arauco',              region: 'Biobío'            },
+  { name: 'Biobío',              region: 'Biobío'            },
   { name: 'Malleco',             region: 'La Araucanía'       },
   { name: 'Cautín I',            region: 'La Araucanía'       },
   { name: 'Cautín II',           region: 'La Araucanía'       },
@@ -152,10 +154,10 @@ const CONSEJOS_REGIONALES = [
   { name: 'Coyhaique',           region: 'Aysén'              },
   { name: 'General Carrera',     region: 'Aysén'              },
   { name: 'Capitán Prat',        region: 'Aysén'              },
-  { name: 'Última Esperanza',    region: 'Magallanes'         },
-  { name: 'Magallanes',          region: 'Magallanes'         },
-  { name: 'Tierra del Fuego',    region: 'Magallanes'         },
-  { name: 'Antártica Chilena',   region: 'Magallanes'         },
+  { name: 'Última Esperanza',    region: 'Magallanes y Antártica Chilena'         },
+  { name: 'Magallanes',          region: 'Magallanes y Antártica Chilena'         },
+  { name: 'Tierra del Fuego',    region: 'Magallanes y Antártica Chilena'         },
+  { name: 'Antártica Chilena',   region: 'Magallanes y Antártica Chilena'         },
 ];
 
 // ── Colors ────────────────────────────────────────────────────────────────────
@@ -178,7 +180,7 @@ const CR_COLOR       = '#a67cc0';
 const REGIONS = [
   'Arica y Parinacota', 'Tarapacá', 'Antofagasta', 'Atacama',
   'Coquimbo', 'Valparaíso', 'RM', "O'Higgins", 'Maule', 'Ñuble',
-  'Bío-Bío', 'La Araucanía', 'Los Ríos', 'Los Lagos', 'Aysén', 'Magallanes',
+  'Biobío', 'La Araucanía', 'Los Ríos', 'Los Lagos', 'Aysén', 'Magallanes y Antártica Chilena',
 ];
 
 // ── SVG & zoom ────────────────────────────────────────────────────────────────
