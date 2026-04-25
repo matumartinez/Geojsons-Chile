@@ -84,7 +84,7 @@ const PROVINCES = [
   { name: 'Capitán Prat',             region: 'Aysén'              },
   { name: 'Coihaique',                region: 'Aysén'              },
   { name: 'General Carrera',          region: 'Aysén'              },
-  { name: 'Antártica Chilena',        region: 'Magallanes'         },
+  { name: 'Antártica Chilena',        region: 'Magallanes y Antártica Chilena'         },
   { name: 'Magallanes',               region: 'Magallanes'         },
   { name: 'Tierra del Fuego',         region: 'Magallanes'         },
   { name: 'Última Esperanza',         region: 'Magallanes'         },
