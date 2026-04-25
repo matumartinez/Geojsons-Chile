@@ -68,6 +68,7 @@ const PROVINCES = [
   { name: 'Curicó',                   region: 'Maule'              },
   { name: 'Linares',                  region: 'Maule'              },
   { name: 'Talca',                    region: 'Maule'              },
+  { name: 'Diguillín',                    region: 'Ñuble'              },
   { name: 'Ñuble',                    region: 'Ñuble'              },
   { name: 'Arauco',                   region: 'Bío-Bío'            },
   { name: 'Bio Bío',                  region: 'Bío-Bío'            },
