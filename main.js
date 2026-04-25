@@ -152,10 +152,10 @@ const CONSEJOS_REGIONALES = [
   { name: 'Coyhaique',           region: 'Aysén'              },
   { name: 'General Carrera',     region: 'Aysén'              },
   { name: 'Capitán Prat',        region: 'Aysén'              },
-  { name: 'Última Esperanza',    region: 'Magallanes'         },
-  { name: 'Magallanes',          region: 'Magallanes'         },
-  { name: 'Tierra del Fuego',    region: 'Magallanes'         },
-  { name: 'Antártica Chilena',   region: 'Magallanes'         },
+  { name: 'Última Esperanza',    region: 'Magallanes y Antártica Chilena'         },
+  { name: 'Magallanes',          region: 'Magallanes y Antártica Chilena'         },
+  { name: 'Tierra del Fuego',    region: 'Magallanes y Antártica Chilena'         },
+  { name: 'Antártica Chilena',   region: 'Magallanes y Antártica Chilena'         },
 ];
 
 // ── Colors ────────────────────────────────────────────────────────────────────
