@@ -87,7 +87,7 @@ const PROVINCES = [
   { name: 'Antártica Chilena',        region: 'Magallanes y Antártica Chilena'         },
   { name: 'Magallanes',               region: 'Magallanes'         },
   { name: 'Tierra del Fuego',         region: 'Magallanes'         },
-  { name: 'Última Esperanza',         region: 'Magallanes'         },
+  { name: 'Última Esperanza',         region: 'Magallanes y Antártica Chilena'         },
 ];
 
 const CONSEJOS_REGIONALES = [
