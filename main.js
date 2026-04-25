@@ -178,7 +178,7 @@ const CR_COLOR       = '#a67cc0';
 const REGIONS = [
   'Arica y Parinacota', 'Tarapacá', 'Antofagasta', 'Atacama',
   'Coquimbo', 'Valparaíso', 'RM', "O'Higgins", 'Maule', 'Ñuble',
-  'Bío-Bío', 'La Araucanía', 'Los Ríos', 'Los Lagos', 'Aysén', 'Magallanes',
+  'Bío-Bío', 'La Araucanía', 'Los Ríos', 'Los Lagos', 'Aysén', 'Magallanes y Antártica Chilena',
 ];
 
 // ── SVG & zoom ────────────────────────────────────────────────────────────────
