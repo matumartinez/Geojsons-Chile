@@ -13651,7 +13651,7 @@
             "type": "Feature",
             "properties": {
                 "consejo_regional": "Biobío",
-                "name": "Alto Bío Bío"
+                "name": "Alto Biobío"
             },
             "geometry": {
                 "type": "Polygon",
