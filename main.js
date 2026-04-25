@@ -31,7 +31,7 @@ const DISTRICTS = [
   { num: 25, region: 'Los Lagos',           file: 'distritos electorales/distrito 25 (Los Lagos).json' },
   { num: 26, region: 'Los Lagos',           file: 'distritos electorales/distrito 26 (Los Lagos).json' },
   { num: 27, region: 'Aysén',               file: 'distritos electorales/distrito 27 (Aysén).json' },
-  { num: 28, region: 'Magallanes',          file: 'distritos electorales/distrito 28 (Magallanes).json' },
+  { num: 28, region: 'Magallanes y Antártica Chilena',          file: 'distritos electorales/distrito 28 (Magallanes y Antártica Chilena).json' },
 ];
 
 const PROVINCES = [
