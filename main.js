@@ -31,7 +31,7 @@ const DISTRICTS = [
   { num: 25, region: 'Los Lagos',           file: 'distritos electorales/distrito 25 (Los Lagos).json' },
   { num: 26, region: 'Los Lagos',           file: 'distritos electorales/distrito 26 (Los Lagos).json' },
   { num: 27, region: 'Aysén',               file: 'distritos electorales/distrito 27 (Aysén).json' },
-  { num: 28, region: 'Magallanes',          file: 'distritos electorales/distrito 28 (Magallanes).json' },
+  { num: 28, region: 'Magallanes y Antártica Chilena',          file: 'distritos electorales/distrito 28 (Magallanes y Antártica Chilena).json' },
 ];
 
 const PROVINCES = [
@@ -69,6 +69,7 @@ const PROVINCES = [
   { name: 'Linares',                  region: 'Maule'              },
   { name: 'Talca',                    region: 'Maule'              },
   { name: 'Itata',                    region: 'Ñuble'              },
+  { name: 'Diguillín',                region: 'Ñuble'              },
   { name: 'Ñuble',                    region: 'Ñuble'              },
   { name: 'Arauco',                   region: 'Bío-Bío'            },
   { name: 'Bio Bío',                  region: 'Bío-Bío'            },
@@ -85,10 +86,10 @@ const PROVINCES = [
   { name: 'Capitán Prat',             region: 'Aysén'              },
   { name: 'Coihaique',                region: 'Aysén'              },
   { name: 'General Carrera',          region: 'Aysén'              },
-  { name: 'Antártica Chilena',        region: 'Magallanes'         },
+  { name: 'Antártica Chilena',        region: 'Magallanes y Antártica Chilena'         },
   { name: 'Magallanes',               region: 'Magallanes'         },
   { name: 'Tierra del Fuego',         region: 'Magallanes'         },
-  { name: 'Última Esperanza',         region: 'Magallanes'         },
+  { name: 'Última Esperanza',         region: 'Magallanes y Antártica Chilena'         },
 ];
 
 const CONSEJOS_REGIONALES = [
@@ -153,10 +154,10 @@ const CONSEJOS_REGIONALES = [
   { name: 'Coyhaique',           region: 'Aysén'              },
   { name: 'General Carrera',     region: 'Aysén'              },
   { name: 'Capitán Prat',        region: 'Aysén'              },
-  { name: 'Última Esperanza',    region: 'Magallanes'         },
-  { name: 'Magallanes',          region: 'Magallanes'         },
-  { name: 'Tierra del Fuego',    region: 'Magallanes'         },
-  { name: 'Antártica Chilena',   region: 'Magallanes'         },
+  { name: 'Última Esperanza',    region: 'Magallanes y Antártica Chilena'         },
+  { name: 'Magallanes',          region: 'Magallanes y Antártica Chilena'         },
+  { name: 'Tierra del Fuego',    region: 'Magallanes y Antártica Chilena'         },
+  { name: 'Antártica Chilena',   region: 'Magallanes y Antártica Chilena'         },
 ];
 
 // ── Colors ────────────────────────────────────────────────────────────────────
@@ -179,7 +180,7 @@ const CR_COLOR       = '#a67cc0';
 const REGIONS = [
   'Arica y Parinacota', 'Tarapacá', 'Antofagasta', 'Atacama',
   'Coquimbo', 'Valparaíso', 'RM', "O'Higgins", 'Maule', 'Ñuble',
-  'Bío-Bío', 'La Araucanía', 'Los Ríos', 'Los Lagos', 'Aysén', 'Magallanes',
+  'Bío-Bío', 'La Araucanía', 'Los Ríos', 'Los Lagos', 'Aysén', 'Magallanes y Antártica Chilena',
 ];
 
 // ── SVG & zoom ────────────────────────────────────────────────────────────────
